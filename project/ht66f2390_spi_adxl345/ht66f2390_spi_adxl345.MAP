@@ -1,0 +1,173 @@
+
+Linker Version 8.7.7.220718
+Input Object File: d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_spi_adxl345\STARTUP1_L.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_spi_adxl345\HAL_CLOCK.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_spi_adxl345\GPIO.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ)
+     00h     0002h     0004h    0003h      CODE               @start (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ)
+     00h     0005h     0012h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0013h     001ch    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     001dh     007dh    0061h      CODE               _SPI_read_X (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     007eh     009ah    001dh      CODE               _SPI_START (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     009bh     00b4h    001ah      CODE               _SPI_init (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     00b5h     00ech    0038h      CODE               _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\HAL_CLOCK.OBJ)
+     00h     00edh     0114h    0028h      CODE               _main (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ)
+     00h     0080h     0080h    0001h      DATA     34        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     103       @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     51        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     3         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     2         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0088h     0088h    0001h      DATA     1         @HCCINIT0_value3 (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\GPIO.OBJ)
+     00h     0089h     0089h    0001h      DATA     1         @HCCINIT0_value2 (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\GPIO.OBJ)
+     00h     008ah     008ah    0001h      DATA     1         @HCCINIT0_value1 (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\GPIO.OBJ)
+     00h     008bh     008bh    0001h      DATA     1         @HCCINIT0_value (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\GPIO.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0088h     0088h    0000h      LOCAL    0         @dummy (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _main (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ)
+     00h     0085h     0087h    0003h      LOCAL    2.3333    _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\HAL_CLOCK.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _SPI_init (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0000h      LOCAL    0         _SPI_START (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     0085h     0085h    0001h      LOCAL    2         _SPI_read_X (d:\mike\holtek_c\project\ht66f2390_spi_adxl345\SPI_ADXL345.OBJ)
+     00h     0085h     0085h    0001h      LOCAL    2         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     007eh              _SPI_START
+     009bh              _SPI_init
+     001dh              _SPI_read_X
+     0019h              __DELAYX0
+     0018h              __DELAYX1
+     0017h              __DELAYX2
+     0016h              __DELAYX3
+     0015h              __DELAYX4
+     0014h              __DELAYX5
+     0013h              __DELAYX6
+     000ah              __DELAYY0_isr00
+     0009h              __DELAYY1_isr00
+     0008h              __DELAYY2_isr00
+     0007h              __DELAYY3_isr00
+     0006h              __DELAYY4_isr00
+     0005h              __DELAYY5_isr00
+     00b5h              _clockSetSystemSrc
+     0085h              _clockSetSystemSrc_2
+     00edh              _main
+     008bh              _value
+     008ah              _value1
+     0089h              _value2
+     0088h              _value3
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+
+     Address            Public by Value
+     0005h              __DELAYY5_isr00
+     0006h              __DELAYY4_isr00
+     0007h              __DELAYY3_isr00
+     0008h              __DELAYY2_isr00
+     0009h              __DELAYY1_isr00
+     000ah              __DELAYY0_isr00
+     0013h              __DELAYX6
+     0014h              __DELAYX5
+     0015h              __DELAYX4
+     0016h              __DELAYX3
+     0017h              __DELAYX2
+     0018h              __DELAYX1
+     0019h              __DELAYX0
+     001dh              _SPI_read_X
+     007eh              _SPI_START
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0085h              _clockSetSystemSrc_2
+     0088h              _value3
+     0089h              _value2
+     008ah              _value1
+     008bh              _value
+     009bh              _SPI_init
+     00b5h              _clockSetSystemSrc
+     00edh              _main
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0115h    3%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0115h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     000ch    9%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     000ch    0%
+
+Use Stack Count
+_main: 2
+
+Call Tree
+    @dummy
+        _main (0)
+            _clockSetSystemSrc (1)
+            _SPI_init (1)
+                __DELAYX (2)
+            __DELAYX (1)
+            _SPI_START (1)
+                __DELAYX (2)
+            _SPI_read_X (1)
+                __DELAYX (2)
+            _builtin_holtek_delay_isr00 (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'd:\mike\holtek_c\project\ht66f2390_spi_adxl345\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

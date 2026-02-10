@@ -1,0 +1,373 @@
+
+Linker Version 8.7.7.220718
+Input Object File: d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\STARTUP1_L.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\HAL_CLOCK.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     0002h     0024h    0023h      CODE               @start (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     0025h     0029h    0005h      CODE               itodaz (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     002ah     0041h    0018h      CODE               @builtin_holtek_dtdecode (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0042h     0081h    0040h      CODE               _builtin_holtek_dtmul (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     00bfh    003eh      CODE               @builtin_holtek_dtsubadd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00c0h     00d5h    0016h      CODE               @builtin_holtek_ftdecode (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d6h     010ah    0035h      CODE               _builtin_holtek_ftmul (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     010bh     0135h    002bh      CODE               @builtin_holtek_ftol (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0136h     0169h    0034h      CODE               _builtin_holtek_dtnorm (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     016ah     0198h    002fh      CODE               _builtin_holtek_ftnorm (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0199h     019fh    0007h      CODE               _builtin_holtek_dtinf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     01a0h     01a5h    0006h      CODE               _builtin_holtek_ftinf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     01a6h     01b3h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     01b4h     01dch    0029h      CODE               _delay (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     01ddh     01dfh    0003h      CODE               _CROM2PROM (CROM2PROM)
+     00h     01e0h     01f5h    0016h      CODE               _uartWrite (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ)
+     00h     01f6h     022ch    0037h      CODE               _builtin_holtek_divmodhi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     022dh     030ah    00deh      CODE               _readtemp (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     030bh     0314h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0315h     0329h    0015h      CODE               _I2C_stop_bit (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     032ah     032dh    0004h      CODE               __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     032eh     0372h    0045h      CODE               _I2C_read_Data3 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0373h     03b7h    0045h      CODE               _I2C_read_Data2 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     03b8h     040ah    0053h      CODE               _I2C_read_Data (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     040bh     0469h    005fh      CODE               _sendbyte (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     046ah     0490h    0027h      CODE               _I2C_start_bit (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0491h     04a9h    0019h      CODE               _I2C_MLX90614_write (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     04aah     0514h    006bh      CODE               _uart_init (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ)
+     00h     0515h     051ch    0008h      CODE               _I2C_init (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     051dh     0554h    0038h      CODE               _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\HAL_CLOCK.OBJ)
+     00h     0555h     0591h    003dh      CODE               _main (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     0592h     0596h    0005h      CODE               @ROMDATA_BASE (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     30        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     35        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     40        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     23        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     23        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      DATA     7         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0086h     0086h    0001h      DATA     7         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     008ch    0006h      DATA     29.833    ftdata1 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008dh     008fh    0003h      DATA     16.333    dtdata (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0090h     0096h    0007h      DATA     12        ftdata2 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009fh     00a0h    0002h      DATA     1.5       @HCCINIT_b4 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00a1h     00a2h    0002h      DATA     0         @HCCINIT_x (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ)
+     00h     00a3h     00a3h    0001h      DATA     4         @HCCINIT0_data2 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00a4h     00a4h    0001h      DATA     4         @HCCINIT0_data (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00a5h     00a5h    0001h      DATA     3         @HCCINIT0_data3 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00a6h     00a7h    0002h      DATA     1.5       @HCCINIT0_b3 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00a8h     00a9h    0002h      DATA     1.5       @HCCINIT0_b2 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00aah     00abh    0002h      DATA     1.5       @HCCINIT0_b1 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00ach     00b1h    0006h      DATA     1         @HCCINIT0_c (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     00b2h     00b3h    0002h      DATA     1         @HCCINIT0_Temp (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00b4h     00b6h    0003h      DATA     1         @HCCINIT0_realtemp (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     00b7h     00b7h    0001h      DATA     0         @HCCINIT0_b (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     00b8h     00b8h    0001h      DATA     0         @HCCINIT0_a (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     009fh     009fh    0000h      LOCAL    0         @dummy (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     009fh     009fh    0000h      LOCAL    0         _main (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+     00h     0097h     0099h    0003h      LOCAL    2.3333    _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\HAL_CLOCK.OBJ)
+     00h     0097h     0097h    0001h      LOCAL    7         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_init (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0099h    0003h      LOCAL    5.6667    _uart_init (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ)
+     00h     0098h     009bh    0004h      LOCAL    2         _I2C_MLX90614_write (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_start_bit (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0001h      LOCAL    2         _sendbyte (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_read_Data (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_read_Data2 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_read_Data3 (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _I2C_stop_bit (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     009fh     009fh    0000h      LOCAL    0         _readtemp (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\I2C_MLX90614.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_uitod (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_dtmul (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_dtdecode (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_dtsubadd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_ftmul (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_ftdecode (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _builtin_holtek_ftol (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     009eh    0008h      LOCAL    9.625     _builtin_holtek_divmodhi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0099h    0003h      LOCAL    2.3333    _uartWrite (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\UARTUSE.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0098h     0098h    0000h      LOCAL    0         _delay (d:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0097h     0097h    0000h      ILOCAL   0         _builtin_holtek_dtnorm (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      ILOCAL   0         _builtin_holtek_ftnorm (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      ILOCAL   0         _builtin_holtek_dtinf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      ILOCAL   0         _builtin_holtek_ftinf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     01deh              _Crom2Prom
+     01ddh              _Crom2PromNext
+     0491h              _I2C_MLX90614_write
+     0098h              _I2C_MLX90614_write_2
+     0515h              _I2C_init
+     03b8h              _I2C_read_Data
+     0373h              _I2C_read_Data2
+     032eh              _I2C_read_Data3
+     046ah              _I2C_start_bit
+     0315h              _I2C_stop_bit
+     00b2h              _Temp
+     032dh              __DELAY0
+     032ch              __DELAY1
+     032bh              __DELAY2
+     032ah              __DELAY3
+     0311h              __DELAYX0
+     0310h              __DELAYX1
+     030fh              __DELAYX2
+     030eh              __DELAYX3
+     030dh              __DELAYX4
+     030ch              __DELAYX5
+     030bh              __DELAYX6
+     01abh              __DELAYY0_isr00
+     01aah              __DELAYY1_isr00
+     01a9h              __DELAYY2_isr00
+     01a8h              __DELAYY3_isr00
+     01a7h              __DELAYY4_isr00
+     01a6h              __DELAYY5_isr00
+     00b8h              _a
+     00b7h              _b
+     00aah              _b1
+     00a8h              _b2
+     00a6h              _b3
+     009fh              _b4
+     01f6h              _builtin_holtek_divmodhi4_isr00
+     0084h              _builtin_holtek_dtadd
+     0035h              _builtin_holtek_dtdecode1
+     002ah              _builtin_holtek_dtdecode2
+     0199h              _builtin_holtek_dtinf
+     0042h              _builtin_holtek_dtmul
+     0136h              _builtin_holtek_dtnorm
+     0082h              _builtin_holtek_dtsub
+     003dh              _builtin_holtek_dtzero
+     0040h              _builtin_holtek_dtzero1
+     008ah              _builtin_holtek_exp1
+     0093h              _builtin_holtek_exp2
+     008ch              _builtin_holtek_floatflag
+     00cah              _builtin_holtek_ftdecode1
+     00c0h              _builtin_holtek_ftdecode2
+     01a0h              _builtin_holtek_ftinf
+     00d6h              _builtin_holtek_ftmul
+     016ah              _builtin_holtek_ftnorm
+     010bh              _builtin_holtek_ftol
+     00d2h              _builtin_holtek_ftzero
+     00d4h              _builtin_holtek_ftzero1
+     0087h              _builtin_holtek_mant1
+     008dh              _builtin_holtek_mant12p
+     0090h              _builtin_holtek_mant2
+     0094h              _builtin_holtek_prod
+     008bh              _builtin_holtek_signs
+     0208h              _builtin_holtek_udivmodhi4_isr00
+     009ch              _builtin_holtek_udivmodhi4_isr00_2
+     0025h              _builtin_holtek_uitod
+     00ach              _c
+     051dh              _clockSetSystemSrc
+     00a4h              _data
+     00a3h              _data2
+     00a5h              _data3
+     01b4h              _delay
+     0555h              _main
+     022dh              _readtemp
+     00b4h              _realtemp
+     040bh              _sendbyte
+     01e0h              _uartWrite
+     04aah              _uart_init
+     00a1h              _x
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0086h              rg
+     0591h              startup_value_1
+
+     Address            Public by Value
+     0025h              _builtin_holtek_uitod
+     002ah              _builtin_holtek_dtdecode2
+     0035h              _builtin_holtek_dtdecode1
+     003dh              _builtin_holtek_dtzero
+     0040h              _builtin_holtek_dtzero1
+     0042h              _builtin_holtek_dtmul
+     0080h              ra
+     0081h              rb
+     0082h              _builtin_holtek_dtsub
+     0082h              rc
+     0083h              rd
+     0084h              _builtin_holtek_dtadd
+     0084h              re
+     0085h              rf
+     0086h              rg
+     0087h              _builtin_holtek_mant1
+     008ah              _builtin_holtek_exp1
+     008bh              _builtin_holtek_signs
+     008ch              _builtin_holtek_floatflag
+     008dh              _builtin_holtek_mant12p
+     0090h              _builtin_holtek_mant2
+     0093h              _builtin_holtek_exp2
+     0094h              _builtin_holtek_prod
+     0098h              _I2C_MLX90614_write_2
+     009ch              _builtin_holtek_udivmodhi4_isr00_2
+     009fh              _b4
+     00a1h              _x
+     00a3h              _data2
+     00a4h              _data
+     00a5h              _data3
+     00a6h              _b3
+     00a8h              _b2
+     00aah              _b1
+     00ach              _c
+     00b2h              _Temp
+     00b4h              _realtemp
+     00b7h              _b
+     00b8h              _a
+     00c0h              _builtin_holtek_ftdecode2
+     00cah              _builtin_holtek_ftdecode1
+     00d2h              _builtin_holtek_ftzero
+     00d4h              _builtin_holtek_ftzero1
+     00d6h              _builtin_holtek_ftmul
+     010bh              _builtin_holtek_ftol
+     0136h              _builtin_holtek_dtnorm
+     016ah              _builtin_holtek_ftnorm
+     0199h              _builtin_holtek_dtinf
+     01a0h              _builtin_holtek_ftinf
+     01a6h              __DELAYY5_isr00
+     01a7h              __DELAYY4_isr00
+     01a8h              __DELAYY3_isr00
+     01a9h              __DELAYY2_isr00
+     01aah              __DELAYY1_isr00
+     01abh              __DELAYY0_isr00
+     01b4h              _delay
+     01ddh              _Crom2PromNext
+     01deh              _Crom2Prom
+     01e0h              _uartWrite
+     01f6h              _builtin_holtek_divmodhi4_isr00
+     0208h              _builtin_holtek_udivmodhi4_isr00
+     022dh              _readtemp
+     030bh              __DELAYX6
+     030ch              __DELAYX5
+     030dh              __DELAYX4
+     030eh              __DELAYX3
+     030fh              __DELAYX2
+     0310h              __DELAYX1
+     0311h              __DELAYX0
+     0315h              _I2C_stop_bit
+     032ah              __DELAY3
+     032bh              __DELAY2
+     032ch              __DELAY1
+     032dh              __DELAY0
+     032eh              _I2C_read_Data3
+     0373h              _I2C_read_Data2
+     03b8h              _I2C_read_Data
+     040bh              _sendbyte
+     046ah              _I2C_start_bit
+     0491h              _I2C_MLX90614_write
+     04aah              _uart_init
+     0515h              _I2C_init
+     051dh              _clockSetSystemSrc
+     0555h              _main
+     0591h              startup_value_1
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0597h    17%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0597h    2%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0039h    44%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0039h    1%
+
+Use Stack Count
+_main: 3
+
+Call Tree
+    @dummy
+        _main (0)
+            _clockSetSystemSrc (1)
+            _builtin_holtek_delay_isr00 (1)
+            _I2C_init (1)
+            _uart_init (1)
+            _I2C_MLX90614_write (1)
+                _I2C_start_bit (2)
+                    __DELAYX (3)
+                _sendbyte (2)
+                    __DELAYX (3)
+                _I2C_read_Data (2)
+                    __DELAY (3)
+                _I2C_read_Data2 (2)
+                    __DELAY (3)
+                _I2C_read_Data3 (2)
+                    __DELAY (3)
+                _I2C_stop_bit (2)
+                    __DELAYX (3)
+            _readtemp (1)
+                _builtin_holtek_uitod (2)
+                _builtin_holtek_dtmul (2)
+                    _builtin_holtek_dtdecode (3)
+                _builtin_holtek_dtsubadd (2)
+                    _builtin_holtek_dtdecode (3)
+                _builtin_holtek_ftmul (2)
+                    _builtin_holtek_ftdecode (3)
+                _builtin_holtek_ftol (2)
+                    _builtin_holtek_ftdecode (3)
+                _builtin_holtek_divmodhi4_isr00 (2)
+            _uartWrite (1)
+                _Crom2Prom (2)
+            _delay (1)
+                _builtin_holtek_delay_isr00 (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'd:\mike\holtek_c\project\ht66f2390_i2c_mlx90614\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

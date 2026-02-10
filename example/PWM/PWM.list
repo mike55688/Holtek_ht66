@@ -1,0 +1,365 @@
+				;file C:\Users\Steven\Desktop\程式\70A\PWM\RGBV1.c
+				;1	// PROGRAM	: RGBV1.c						2016.0601
+				;2	// FUNCTION	: RGB LED Control with Keypad	By Steven
+				;3	#include <HT66F70A.h>
+				;4	#include "Mytype.H"
+				;5	#define  KeyPort	_pg
+				;6	#define  KeyPortC	_pgc
+				;7	#define  KeyPortPU	_pgpu
+				;8	u8 ScanKey(void);
+				;9	void Delayms(u16);
+				;10	void main()
+				;11	{	u8 key;
+				@code .SECTION 'CODE'
+				include HT66F70A.inc
+0000	1F0B	clr     BP
+0001	2802	jmp     _main_startup1
+				@start .SECTION 'CODE'
+				_main_startup1:
+				@start .SECTION 'CODE'
+0002	0F00	mov     a, 0H
+0003	008B	mov     BP, a
+0004	284A	jmp     _main
+0005	0000	nop
+0006	0000	nop
+0007	0000	nop
+0008	0000	nop
+				L0009:
+0009	0000	nop
+				L000A:
+000A	0000	nop
+000B	1785	sdz     ACC
+000C	280A	jmp     L000A
+				L000D:
+000D	0000	nop
+000E	1785	sdz     ACC
+000F	280D	jmp     L000D
+0010	5783	sdz     rc[1]
+0011	280D	jmp     L000D
+0012	0003	ret
+				;12		s16 R=0,G=0,B=0;
+0067	5F0A	clr     B[0]
+0068	5F0B	clr     B[1]
+0069	5F08	clr     G[0]
+006A	5F09	clr     G[1]
+006B	5F06	clr     R[0]
+006C	5F07	clr     R[1]
+				;13		_wdtc=0b10101111;						//關閉WDT
+				_main:
+				_main:
+004A	0FAF	mov     a, AFH
+004B	00BE	mov     WDTC, a
+				;14	
+				;15		_tm1c0=0b00110000;						//fINT=fSYS/64,T1RP=000
+004C	0F30	mov     a, 30H
+004D	00C8	mov     TM1C0, a
+				;16		_tm1c1=0b10101000;						//PWM G, Act Hi,TM1RP Match Clear
+004E	0FA8	mov     a, A8H
+004F	00C9	mov     TM1C1, a
+				;17		_tm1c2=0b10101000;						//PWM B, Act Hi,Edge Aligned
+0050	0FA8	mov     a, A8H
+0051	00CA	mov     TM1C2, a
+				;18		_tm1al=0; _tm1ah=0;						//Initial 0 Duty(G)
+0052	1F4D	clr     TM1AL
+0053	1F4E	clr     TM1AH
+				;19		_tm1bl=0; _tm1bh=0;						//Initial 0 Duty(B)
+0054	1F4F	clr     TM1BL
+0055	1F50	clr     TM1BH
+				;20		
+				;21		_tm3c0=0b00110000;						//fINT=fSYS/64,T3RP=000
+0056	0F30	mov     a, 30H
+0057	00D8	mov     TM3C0, a
+				;22		_tm3c1=0b10101000;						//PWM R, Act Hi,TM3RP for Period
+0058	0FA8	mov     a, A8H
+0059	00D9	mov     TM3C1, a
+				;23		_tm3al=0; _tm3ah=0;						//Initial 0 Duty(R)
+005A	1F5C	clr     TM3AL
+005B	1F5D	clr     TM3AH
+				;24	
+				;25		_pcs3=0x10;								//Enable PC7 as TP1A (G)	
+005C	0F10	mov     a, 10H
+005D	80EB	lmov    PCS3, a
+				;26		_pcs0=0x10;								//Enable PC1 as TP1B (B)	
+005F	0F10	mov     a, 10H
+0060	80E8	lmov    PCS0, a
+				;27		_pds0=0x01;								//Enable PD0 as TP3	 (R)
+0062	0F01	mov     a, 1H
+0063	80EC	lmov    PDS0, a
+				;28	
+				;29		_t1on=1; _t3on=1;
+0065	31C8	set     T1ON
+0066	31D8	set     T3ON
+				;30		while(1)
+				;31		{	do key=ScanKey(); while(key==16);
+				_L19:
+006D	2028	call    _ScanKey
+006E	408C	mov     key[0], a
+006F	470C	mov     a, key[0]
+0070	0A10	sub     a, 10H
+0071	3D0A	sz      Z
+0072	286D	jmp     _L19
+0073	0AF0	sub     a, F0H
+0074	3D0A	sz      Z
+0075	2897	jmp     _L21
+				;32			switch(key)
+0076	470C	mov     a, key[0]
+0077	0A01	sub     a, 1H
+0078	3D0A	sz      Z
+0079	2889	jmp     _L22
+007A	0A03	sub     a, 3H
+007B	3D0A	sz      Z
+007C	28AC	jmp     _L23
+007D	470C	mov     a, key[0]
+007E	0A05	sub     a, 5H
+007F	3D0A	sz      Z
+0080	289E	jmp     _L24
+0081	0A03	sub     a, 3H
+0082	3D0A	sz      Z
+0083	28C3	jmp     _L25
+0084	470C	mov     a, key[0]
+0085	0A09	sub     a, 9H
+0086	390A	snz     Z
+0087	28CC	jmp     _L35
+0088	28B5	jmp     _L37
+				;33			{	case 1:
+				;34					R=(R+40<1024)?(R+40):1023;	//R+40若大於1023則R=1023
+				_L22:
+0089	0F28	mov     a, 28H
+008A	4386	addm    a, R[0]
+008B	0F00	mov     a, 0H
+008C	5387	adcm    a, R[1]
+008D	0FFF	mov     a, FFH
+008E	4206	sub     a, R[0]
+008F	0F03	mov     a, 3H
+0090	5207	sbc     a, R[1]
+0091	3B8A	snz     SC
+0092	28D2	jmp     _L20
+0093	5F86	set     R[0]
+0094	0F03	mov     a, 3H
+0095	4087	mov     R[1], a
+				;35					break;
+0096	28D2	jmp     _L20
+				;36				case 0:
+				;37					R=(R-40<0)?0:(R-40);		//R-40若小於0則R=0
+				_L21:
+0097	0FD8	mov     a, D8H
+0098	4386	addm    a, R[0]
+0099	0FFF	mov     a, FFH
+009A	5387	adcm    a, R[1]
+009B	7B87	snz     R[1].7
+009C	28D2	jmp     _L20
+009D	28D0	jmp     _L36
+				;38					break;
+				;39				case 5:
+				;40					G=(G+40<1024)?(G+40):1023;
+				_L24:
+009E	0F28	mov     a, 28H
+009F	4388	addm    a, G[0]
+00A0	0F00	mov     a, 0H
+00A1	5389	adcm    a, G[1]
+00A2	0FFF	mov     a, FFH
+00A3	4208	sub     a, G[0]
+00A4	0F03	mov     a, 3H
+00A5	5209	sbc     a, G[1]
+00A6	3B8A	snz     SC
+00A7	28D2	jmp     _L20
+00A8	5F88	set     G[0]
+00A9	0F03	mov     a, 3H
+00AA	4089	mov     G[1], a
+				;41					break;
+00AB	28D2	jmp     _L20
+				;42				case 4:
+				;43					G=(G-40<0)?0:(G-40);
+				_L23:
+00AC	0FD8	mov     a, D8H
+00AD	4388	addm    a, G[0]
+00AE	0FFF	mov     a, FFH
+00AF	5389	adcm    a, G[1]
+00B0	7B89	snz     G[1].7
+00B1	28D2	jmp     _L20
+00B2	5F08	clr     G[0]
+00B3	5F09	clr     G[1]
+				;44					break;
+00B4	28D2	jmp     _L20
+				;45				case 9:
+				;46					B=(B+40<1024)?(B+40):1023;
+				_L37:
+00B5	0F28	mov     a, 28H
+00B6	438A	addm    a, B[0]
+00B7	0F00	mov     a, 0H
+00B8	538B	adcm    a, B[1]
+00B9	0FFF	mov     a, FFH
+00BA	420A	sub     a, B[0]
+00BB	0F03	mov     a, 3H
+00BC	520B	sbc     a, B[1]
+00BD	3B8A	snz     SC
+00BE	28D2	jmp     _L20
+00BF	5F8A	set     B[0]
+00C0	0F03	mov     a, 3H
+00C1	408B	mov     B[1], a
+				;47					break;
+00C2	28D2	jmp     _L20
+				;48				case 8:
+				;49					B=(B-40<0)?0:(B-40);
+				_L25:
+00C3	0FD8	mov     a, D8H
+00C4	438A	addm    a, B[0]
+00C5	0FFF	mov     a, FFH
+00C6	538B	adcm    a, B[1]
+00C7	7B8B	snz     B[1].7
+00C8	28D2	jmp     _L20
+00C9	5F0A	clr     B[0]
+00CA	5F0B	clr     B[1]
+				;50					break;
+00CB	28D2	jmp     _L20
+				;51				default:
+				;52					R=0; G=0; B=0;
+				_L35:
+00CC	5F0A	clr     B[0]
+00CD	5F0B	clr     B[1]
+00CE	5F08	clr     G[0]
+00CF	5F09	clr     G[1]
+				_L36:
+00D0	5F06	clr     R[0]
+00D1	5F07	clr     R[1]
+				;53					break;
+				;54			}
+				;55			_tm3al=(u8)R; _tm3ah=R>>8;			//Update Duty(R)
+				_L20:
+00D2	4706	mov     a, R[0]
+00D3	00DC	mov     TM3AL, a
+00D4	4707	mov     a, R[1]
+00D5	00DD	mov     TM3AH, a
+				;56			_tm1al=(u8)G; _tm1ah=G>>8;			//Update Duty(G)
+00D6	4708	mov     a, G[0]
+00D7	00CD	mov     TM1AL, a
+00D8	4709	mov     a, G[1]
+00D9	00CE	mov     TM1AH, a
+				;57			_tm1bl=(u8)B; _tm1bh=B>>8;			//Update Duty(B)
+00DA	470A	mov     a, B[0]
+00DB	00CF	mov     TM1BL, a
+00DC	470B	mov     a, B[1]
+00DD	00D0	mov     TM1BH, a
+				;58			Delayms(100);				
+00DE	0F64	mov     a, 64H
+00DF	4084	mov     del, a
+00E0	5F05	clr     del[1]
+00E1	2013	call    _Delayms
+				;59		}
+00E2	286D	jmp     _L19
+00E3	28E3	jmp     $
+				;60	}
+				;61	u8 ScanKey()
+				;62	{	u8 i,key=0;
+002E	5F00	clr     ra
+				;63		KeyPortC=0xF0; KeyPortPU=0xF0;			//IO規劃與提升身電阻致能
+				_ScanKey:
+				_ScanKey:
+0028	0FF0	mov     a, F0H
+0029	00AB	mov     PGC, a
+002A	0FF0	mov     a, F0H
+002B	00A9	mov     PGPU, a
+				;64		KeyPort=0b11111110;					    //Initial Scancode
+002C	0FFE	mov     a, FEH
+002D	00AA	mov     PG, a
+				;65		for(i=0;i<=3;i++)
+0044	4700	mov     a, ra
+0045	0A10	sub     a, 10H
+0046	390A	snz     Z
+0047	282F	jmp     _L6
+				;66		{	if(!(KeyPort & 1<<4)) break;		//Check Column 0
+				_L6:
+002F	3A2A	snz     PG4
+0030	2848	jmp     _L2
+				;67			key++;
+0033	5480	inc     ra
+0034	2848	jmp     _L2
+				;68			if(!(KeyPort & 1<<5)) break;		//Check Column 1
+0031	3EAA	sz      PG5
+0032	2835	jmp     _L3
+				;69			key++;
+0037	0F02	mov     a, 2H
+0038	4380	addm    a, ra
+0039	2848	jmp     _L2
+				;70			if(!(KeyPort & 1<<6)) break;		//Check Column 2
+				_L3:
+0035	3F2A	sz      PG6
+0036	283A	jmp     _L4
+				;71			key++;
+003C	0F03	mov     a, 3H
+003D	4380	addm    a, ra
+003E	2848	jmp     _L2
+				;72			if(!(KeyPort & 1<<7)) break;		//Check Column 3
+				_L4:
+003A	3FAA	sz      PG7
+003B	283F	jmp     _L5
+				;73			key++;
+				_L5:
+003F	0F04	mov     a, 4H
+0040	4380	addm    a, ra
+				;74			KeyPort<<=1; KeyPort|=0b00000001;	//Scancode for Next Row
+0041	072A	mov     a, PG
+0042	03AA	addm    a, PG
+0043	302A	set     PG0
+				;75		}
+				;76		return key;	
+				;77	}
+				_L2:
+0048	4700	mov     a, ra
+0049	0003	ret
+				;78	void Delayms(u16 del)
+				;79	{	u16 i;
+				;80		for(i=0;i<del;i++) GCC_DELAY(2000);		//Delay del ms @fSYS=8MHz
+				_Delayms:
+				_Delayms:
+0013	5F01	clr     rb
+0014	5F02	clr     rc
+0015	2821	jmp     _L15
+				_L16:
+0016	0F01	mov     a, 1H
+0017	4083	mov     rc[1], a
+0018	0FF1	mov     a, F1H
+0019	340B	clr     BP0
+001A	348B	clr     BP1
+001B	2009	call    L0009
+001C	348B	clr     BP1
+001D	340B	clr     BP0
+001E	5481	inc     rb
+001F	3D0A	sz      Z
+0020	5482	inc     rc
+				_L15:
+0021	4701	mov     a, rb
+0022	4204	sub     a, del[0]
+0023	4702	mov     a, rc
+0024	5205	sbc     a, del[1]
+0025	3B0A	snz     CZ
+0026	2816	jmp     _L16
+0027	0003	ret
+				;81	}
+				data .SECTION 'DATA'
+				__pgpu DB DUP (?) ; __pgpu
+				__pg DB DUP (?) ; __pg
+				__pgc DB DUP (?) ; __pgc
+				__wdtc DB DUP (?) ; __wdtc
+				__tm1c0 DB DUP (?) ; __tm1c0
+				__tm1c1 DB DUP (?) ; __tm1c1
+				__tm1c2 DB DUP (?) ; __tm1c2
+				__tm1al DB DUP (?) ; __tm1al
+				__tm1ah DB DUP (?) ; __tm1ah
+				__tm1bl DB DUP (?) ; __tm1bl
+				__tm1bh DB DUP (?) ; __tm1bh
+				__tm3c0 DB DUP (?) ; __tm3c0
+				__tm3c1 DB DUP (?) ; __tm3c1
+				__tm3al DB DUP (?) ; __tm3al
+				__tm3ah DB DUP (?) ; __tm3ah
+				ra DB DUP (?)
+				rb DB DUP (?)
+				rc DB DUP (?)
+				del DB 2 DUP (?) ; del
+				R DB 2 DUP (?) ; R
+				G DB 2 DUP (?) ; G
+				B DB 2 DUP (?) ; B
+				key DB DUP (?) ; key
+				__pcs0 DB DUP (?) ; __pcs0
+				__pcs3 DB DUP (?) ; __pcs3
+				__pds0 DB DUP (?) ; __pds0

@@ -1,0 +1,188 @@
+
+Linker Version 8.7.7.220718
+Input Object File: d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_timer\STARTUP1_L.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_timer\HAL_CLOCK.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_timer\UARTUSE.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     0002h     0009h    0008h      CODE               @ROMDATA_BASE (d:\mike\holtek_c\project\ht66f2390_timer\STARTUP1_L.OBJ)
+     00h     0014h     0017h    0004h      CODE               @STM0_code (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     0018h     001bh    0004h      CODE               @STM1_code (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     001ch     003eh    0023h      CODE               @start (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     003fh     006fh    0031h      CODE               _STM0 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     0070h     0094h    0025h      CODE               _STM1 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     0095h     0113h    007fh      CODE               _Timer_init (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     0114h     017eh    006bh      CODE               _uart_init (d:\mike\holtek_c\project\ht66f2390_timer\UARTUSE.OBJ)
+     00h     017fh     01b6h    0038h      CODE               _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_timer\HAL_CLOCK.OBJ)
+     00h     01b7h     01cfh    0019h      CODE               _main (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     0080h     0080h    0001h      DATA     10        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     24        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     18        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     2         @data_r114 (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     2         @data_r214 (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     4         @data_rb14 (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     4         @data_rc14 (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     6         @data_ra14 (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     2         @data_r118 (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     2         @data_r218 (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     3         @data_rb18 (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     3         @data_rc18 (isr:ra~rh)
+     00h     008ch     008ch    0001h      DATA     3         @data_ra18 (isr:ra~rh)
+     00h     0090h     0091h    0002h      DATA     6         @HCCINIT_a (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     0092h     0093h    0002h      DATA     3         @HCCINIT_x (d:\mike\holtek_c\project\ht66f2390_timer\UARTUSE.OBJ)
+     00h     0094h     0099h    0006h      DATA     0         @HCCINIT_data (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     009ah     009ah    0001h      DATA     2         @data_r314 (isr:ra~rh)
+     00h     009bh     009bh    0001h      DATA     2         @data_r318 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0090h     0090h    0000h      LOCAL    0         @dummy (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     0090h     0090h    0000h      LOCAL    0         _main (d:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ)
+     00h     008dh     008fh    0003h      LOCAL    2.3333    _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2390_timer\HAL_CLOCK.OBJ)
+     00h     008dh     008fh    0003h      LOCAL    5.6667    _uart_init (d:\mike\holtek_c\project\ht66f2390_timer\UARTUSE.OBJ)
+     00h     008dh     008fh    0003h      LOCAL    4         _Timer_init (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     008dh     008dh    0000h      LOCAL    0         @dummy20 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     008dh     008dh    0000h      LOCAL    0         _STM0 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     008dh     008dh    0000h      LOCAL    0         @dummy24 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+     00h     008dh     008dh    0000h      LOCAL    0         _STM1 (d:\mike\holtek_c\project\ht66f2390_timer\TIMER.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     003fh              _STM0
+     0070h              _STM1
+     0095h              _Timer_init
+     0090h              _a
+     017fh              _clockSetSystemSrc
+     008dh              _clockSetSystemSrc_2
+     0094h              _data
+     01b7h              _main
+     0114h              _uart_init
+     0092h              _x
+     0083h              r114
+     0088h              r118
+     0084h              r214
+     0089h              r218
+     009ah              r314
+     009bh              r318
+     0080h              ra
+     0087h              ra14
+     008ch              ra18
+     0081h              rb
+     0085h              rb14
+     008ah              rb18
+     0082h              rc
+     0086h              rc14
+     008bh              rc18
+     0001h              startup_value_1
+
+     Address            Public by Value
+     0001h              startup_value_1
+     003fh              _STM0
+     0070h              _STM1
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              r114
+     0084h              r214
+     0085h              rb14
+     0086h              rc14
+     0087h              ra14
+     0088h              r118
+     0089h              r218
+     008ah              rb18
+     008bh              rc18
+     008ch              ra18
+     008dh              _clockSetSystemSrc_2
+     0090h              _a
+     0092h              _x
+     0094h              _data
+     0095h              _Timer_init
+     009ah              r314
+     009bh              r318
+     0114h              _uart_init
+     017fh              _clockSetSystemSrc
+     01b7h              _main
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     01c6h    5%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     01c6h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     001ch    21%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     001ch    0%
+
+Use Stack Count
+_main: 1
+_delay: 1
+_uartWrite: 1
+_STM0: 0
+_STM1: 0
+
+Call Tree
+    @dummy
+        _main (0)
+            _clockSetSystemSrc (1)
+            _uart_init (1)
+            _Timer_init (1)
+    _delay
+        _builtin_holtek_delay_isr00 (0)
+    _uartWrite
+        _Crom2Prom (0)
+        _builtin_holtek_delay_isr00 (0)
+    @dummy20
+        _STM0 (0)
+    @dummy24
+        _STM1 (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'd:\mike\holtek_c\project\ht66f2390_timer\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

@@ -1,0 +1,118 @@
+				;file C:\Users\Steven\Desktop\程式\70A\ADC\ADC.c
+				;1	// PROGRAM	: ADC.c					2016.0601
+				;2	// FUNCTION	: ADC  	Demo Program	By Steven
+				;3	// Connect PA4 --> JP15 TCRT5000, PD0 --> Blue LED
+				;4	#include <HT66F70A.h>
+				;5	#include "MyType.h"
+				;6	void main()
+				;7	{	_wdtc=0b10101111;						//關閉看們狗計時器
+				@code .SECTION 'CODE'
+				include HT66F70A.inc
+0000	1F0B	clr     BP
+0001	2802	jmp     _main_startup1
+				@start .SECTION 'CODE'
+				_main_startup1:
+				@start .SECTION 'CODE'
+0002	0F00	mov     a, 0H
+0003	008B	mov     BP, a
+0004	283C	jmp     _main
+				org	01ch
+				_main:
+				_main:
+003C	0FAF	mov     a, AFH
+003D	00BE	mov     WDTC, a
+				;8		_pas2=0x03;								//設定PA4為AN4通道
+003E	0F03	mov     a, 3H
+003F	80E2	lmov    PAS2, a
+				;9		_adcr0=0b00000100;						//ADOFF=0,選擇AN4轉換 
+0041	0F04	mov     a, 4H
+0042	00E8	mov     ADCR0, a
+				;10		_adcr1=0b00100110;						//ADRFS=1,Clk=fSYS/64,VREFS=0
+0043	0F26	mov     a, 26H
+0044	00E9	mov     ADCR1, a
+				;11		_tm3c0=0b00110000;						//fINT=fSYS/64,T3RP=000
+0045	0F30	mov     a, 30H
+0046	00D8	mov     TM3C0, a
+				;12		_tm3c1=0b10101000;						//PWM R, Act Hi,TM3RP for Period
+0047	0FA8	mov     a, A8H
+0048	00D9	mov     TM3C1, a
+				;13		_tm3al=0; _tm3ah=0;						//Initial 0 Duty(R)
+0049	1F5C	clr     TM3AL
+004A	1F5D	clr     TM3AH
+				;14		_pds0=0x01;								//Enable PD0 as TP3	 (R)
+004B	0F01	mov     a, 1H
+004C	80EC	lmov    PDS0, a
+				;15		_t3on=1;								//開始計數
+004E	31D8	set     T3ON
+				;16		_ade=1; _emi=1;
+004F	31B1	set     ADE
+0050	3030	set     EMI
+				;17		_start=1; _start=0; 					//啟動AD轉換
+0051	33E8	set     START
+0052	37E8	clr     START
+				_L2:
+0053	2853	jmp     $
+0054	2854	jmp     $
+				;18		while(1);
+				;19	}
+				;20	DEFINE_ISR(ISR_ADC,0x1C)
+				;21	{	u16 ADR;
+				@ISR_ADC_code .SECTION 'CODE'
+001C	4080	mov     r11c, a
+001D	070B	mov     a, BP
+001E	1F0B	clr     BP
+001F	2820	jmp     _ISR_ADC
+				_ISR_ADC:
+				_ISR_ADC:
+				@dummy28 .SECTION 'CODE'
+0020	4081	mov     r21c, a
+0021	070A	mov     a, STATUS
+0022	4084	mov     r31c, a
+				;22		ADR=(((u16)_adrh<<8) + _adrl)>>2;		//結果取10-Bbit
+0023	076B	mov     a, ADRH
+0024	4082	mov     rc1c, a
+0025	5F03	clr     rb1c
+0026	076A	mov     a, ADRL
+0027	4383	addm    a, rb1c
+0028	3C0A	sz      C
+0029	5482	inc     rc1c
+002A	340A	clr     C
+002B	5B82	rrc     rc1c
+002C	5B83	rrc     rb1c
+002D	340A	clr     C
+002E	5B82	rrc     rc1c
+002F	5B83	rrc     rb1c
+				;23		_tm3al=(u8)ADR; _tm3ah=ADR>>8;			//Update Duty(R)
+0030	4703	mov     a, rb1c
+0031	00DC	mov     TM3AL, a
+0032	4702	mov     a, rc1c
+0033	00DD	mov     TM3AH, a
+				;24		_start=1; _start=0; 					//啟動AD轉換			
+0034	33E8	set     START
+0035	37E8	clr     START
+0036	4701	mov     a, r21c
+0037	008B	mov     BP, a
+0038	4704	mov     a, r31c
+0039	008A	mov     STATUS, a
+003A	4700	mov     a, r11c
+003B	0004	reti
+				;25	}
+				data .SECTION 'DATA'
+				__intc0 DB DUP (?) ; __intc0
+				__intc1 DB DUP (?) ; __intc1
+				__wdtc DB DUP (?) ; __wdtc
+				__tm3c0 DB DUP (?) ; __tm3c0
+				__tm3c1 DB DUP (?) ; __tm3c1
+				__tm3al DB DUP (?) ; __tm3al
+				__tm3ah DB DUP (?) ; __tm3ah
+				__adcr0 DB DUP (?) ; __adcr0
+				__adcr1 DB DUP (?) ; __adcr1
+				__adrl DB DUP (?) ; __adrl
+				__adrh DB DUP (?) ; __adrh
+				r11c DB DUP (?)
+				r21c DB DUP (?)
+				rc1c DB DUP (?)
+				rb1c DB DUP (?)
+				r31c DB DUP (?)
+				__pas2 DB DUP (?) ; __pas2
+				__pds0 DB DUP (?) ; __pds0

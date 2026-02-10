@@ -1,0 +1,320 @@
+void I2C_device_id()
+{
+	
+		
+				
+		I2C_SDA_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(10);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(10);
+		
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+		I2C_SDA_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(10);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(10);	
+		
+		
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+						
+		_pfpu2 = 1;
+		I2C_sda_set = 1;
+		
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+
+		_pfpu2 = 0;
+		I2C_sda_set = 0;
+		GCC_DELAY(20);
+	//-----------------first_word_address-------------------	
+	uint8_t count;
+	for(count=0;count<8;count++)
+	{
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+	}
+
+		_pfpu2 = 1;
+		GCC_DELAY(20);
+		I2C_sda_set = 1;
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		
+		_pfpu2 = 0;
+		I2C_sda_set = 0;
+		GCC_DELAY(20);
+	//----------------------------------------------------
+	
+	for(count=0;count<6;count++)
+	{
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+	}
+			I2C_SDA_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);	
+		
+			I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		
+		_pfpu2 = 1;		
+		I2C_sda_set = 1;
+
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		
+		_pfpu2 = 0;
+		I2C_sda_set = 0;
+		GCC_DELAY(20);		
+//---------------------------
+	for(count=0;count<7;count++)
+	{
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+	}
+	
+		I2C_SDA_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+	
+
+		_pfpu2 = 1;		
+		I2C_sda_set = 1;
+
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		
+		_pfpu2 = 0;
+		I2C_sda_set = 0;
+		GCC_DELAY(20);	
+		
+//-----------stop bit---------
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 1;
+		GCC_DELAY(20);		
+
+///-------I2C read---------------
+		I2C_start_bit();
+		
+		
+		I2C_SDA_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(10);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(10);
+		
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+		I2C_SDA_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(10);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(10);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(10);	
+		
+		
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+				I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+		
+		I2C_SDA_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		I2C_SDA_pin = 0;
+		GCC_DELAY(20);
+						
+		_pfpu2 = 1;
+		I2C_sda_set = 1;
+		
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+
+		//_pfpu2 = 0;
+		//I2C_sda_set = 0;
+		//GCC_DELAY(20);
+		
+		
+		
+
+		
+		
+		
+	
+	for(count=0;count<8;count++)
+	{
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+	}
+
+//		_pfpu2 = 1;
+//		I2C_sda_set = 1;
+		
+		I2C_SCL_pin = 1;
+		GCC_DELAY(20);
+		I2C_SCL_pin = 0;
+		GCC_DELAY(20);
+		
+//		_pfpu2 = 0;
+//		I2C_sda_set = 0;
+//		GCC_DELAY(20);
+//		
+//		
+//		
+//		I2C_SCL_pin = 1;
+//		GCC_DELAY(20);
+//		I2C_SDA_pin = 1;
+		GCC_DELAY(20);	
+}

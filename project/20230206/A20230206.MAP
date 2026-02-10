@@ -1,0 +1,270 @@
+
+Linker Version 8.7.7.220718
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\STARTUP1_L.OBJ
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\HAL_CLOCK.OBJ
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\UARTUSE.OBJ
+Input Object File: c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\I2C.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0002h     0024h    0023h      CODE               @start (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0025h     0028h    0004h      CODE               @ROMDATA_BASE (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\STARTUP1_L.OBJ)
+     00h     002ch     002fh    0004h      CODE               @LVD_code (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0030h     004dh    001eh      CODE               _LVD (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     004eh     0057h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0058h     0065h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0072h     00a9h    0038h      CODE               _clockSetSystemSrc (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\HAL_CLOCK.OBJ)
+     00h     00aah     00ddh    0034h      CODE               _main (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00deh     00ebh    000eh      CODE               _builtin_holtek_delay_isr2c (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00ech     00feh    0013h      CODE               _delay (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0080h     0080h    0001h      DATA     50        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     125       @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     72        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     4         @data_ra2c (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     2         @data_r12c (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     2         @data_r22c (isr:ra~rh)
+     00h     008ah     008bh    0002h      DATA     3         @HCCINIT_x (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\UARTUSE.OBJ)
+     00h     008ch     008fh    0004h      DATA     1.5       @HCCINIT0_adc (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ)
+     00h     0090h     0090h    0001h      DATA     1         @HCCINIT0_z (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0091h     0091h    0001h      DATA     1         @HCCINIT0_value3 (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ)
+     00h     0092h     0092h    0001h      DATA     1         @HCCINIT0_value2 (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ)
+     00h     0093h     0093h    0001h      DATA     1         @HCCINIT0_value1 (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ)
+     00h     0094h     0094h    0001h      DATA     1         @HCCINIT0_value (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\GPIO.OBJ)
+     00h     0095h     0098h    0004h      DATA     0         @HCCINIT0_d (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0099h     009ch    0004h      DATA     0         @HCCINIT0_c (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     009dh     00a0h    0004h      DATA     0         @HCCINIT0_b (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00a1h     00a4h    0004h      DATA     0         @HCCINIT0_a (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00a5h     00a5h    0001h      DATA     0         @HCCINIT0_X (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00a6h     00a6h    0001h      DATA     0         @HCCINIT0_i (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00a7h     00bah    0014h      DATA     0         @HCCINIT0_data (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     00bbh     00bbh    0001h      DATA     2         @data_r32c (isr:ra~rh)
+     00h     00bch     00bch    0001h      DATA     2         @data_r42c (isr:ra~rh)
+     00h     00bdh     00bdh    0001h      DATA     2         @data_r52c (isr:ra~rh)
+     00h     00beh     00beh    0001h      DATA     2         @data_r62c (isr:ra~rh)
+     00h     00bfh     00bfh    0001h      DATA     2         @data_r72c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ah     008ah    0000h      LOCAL    0         @dummy (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _main (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0087h     0089h    0003h      LOCAL    2.3333    _clockSetSystemSrc (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\HAL_CLOCK.OBJ)
+     00h     0087h     0087h    0001h      LOCAL    5         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0000h      LOCAL    0         @dummy44 (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _LVD (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _delay (c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ)
+     00h     0086h     0086h    0001h      LOCAL    2         _builtin_holtek_delay_isr2c (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0030h              _LVD
+     00a5h              _X
+     0054h              __DELAYX0
+     0053h              __DELAYX1
+     0052h              __DELAYX2
+     0051h              __DELAYX3
+     0050h              __DELAYX4
+     004fh              __DELAYX5
+     004eh              __DELAYX6
+     005dh              __DELAYY0_isr00
+     00e3h              __DELAYY0_isr2c
+     005ch              __DELAYY1_isr00
+     00e2h              __DELAYY1_isr2c
+     005bh              __DELAYY2_isr00
+     00e1h              __DELAYY2_isr2c
+     005ah              __DELAYY3_isr00
+     00e0h              __DELAYY3_isr2c
+     0059h              __DELAYY4_isr00
+     00dfh              __DELAYY4_isr2c
+     0058h              __DELAYY5_isr00
+     00deh              __DELAYY5_isr2c
+     00a1h              _a
+     008ch              _adc
+     009dh              _b
+     0086h              _builtin_holtek_delay_isr2c_2
+     0099h              _c
+     0072h              _clockSetSystemSrc
+     0087h              _clockSetSystemSrc_2
+     0095h              _d
+     00a7h              _data
+     00ech              _delay
+     00a6h              _i
+     00aah              _main
+     0094h              _value
+     0093h              _value1
+     0092h              _value2
+     0091h              _value3
+     008ah              _x
+     0090h              _z
+     0084h              r12c
+     0085h              r22c
+     00bbh              r32c
+     00bch              r42c
+     00bdh              r52c
+     00beh              r62c
+     00bfh              r72c
+     0080h              ra
+     0083h              ra2c
+     0081h              rb
+     0082h              rc
+     0024h              startup_value_1
+
+     Address            Public by Value
+     0024h              startup_value_1
+     0030h              _LVD
+     004eh              __DELAYX6
+     004fh              __DELAYX5
+     0050h              __DELAYX4
+     0051h              __DELAYX3
+     0052h              __DELAYX2
+     0053h              __DELAYX1
+     0054h              __DELAYX0
+     0058h              __DELAYY5_isr00
+     0059h              __DELAYY4_isr00
+     005ah              __DELAYY3_isr00
+     005bh              __DELAYY2_isr00
+     005ch              __DELAYY1_isr00
+     005dh              __DELAYY0_isr00
+     0072h              _clockSetSystemSrc
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              ra2c
+     0084h              r12c
+     0085h              r22c
+     0086h              _builtin_holtek_delay_isr2c_2
+     0087h              _clockSetSystemSrc_2
+     008ah              _x
+     008ch              _adc
+     0090h              _z
+     0091h              _value3
+     0092h              _value2
+     0093h              _value1
+     0094h              _value
+     0095h              _d
+     0099h              _c
+     009dh              _b
+     00a1h              _a
+     00a5h              _X
+     00a6h              _i
+     00a7h              _data
+     00aah              _main
+     00bbh              r32c
+     00bch              r42c
+     00bdh              r52c
+     00beh              r62c
+     00bfh              r72c
+     00deh              __DELAYY5_isr2c
+     00dfh              __DELAYY4_isr2c
+     00e0h              __DELAYY3_isr2c
+     00e1h              __DELAYY2_isr2c
+     00e2h              __DELAYY1_isr2c
+     00e3h              __DELAYY0_isr2c
+     00ech              _delay
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     00f0h    2%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     00f0h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0040h    50%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0040h    1%
+
+Use Stack Count
+_main: 1
+_LVD: 2
+_uartWrite: 1
+_I2C_HT24LC64_write: 2
+_I2C_HT24LC64_read: 2
+_I2C_Ack: 1
+_I2C_Nack: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _clockSetSystemSrc (1)
+            _builtin_holtek_delay_isr00 (1)
+            __DELAYX (1)
+    @dummy44
+        _LVD (0)
+            _delay (1)
+                _builtin_holtek_delay_isr2c (2)
+    _uartWrite
+        _Crom2Prom (0)
+        _builtin_holtek_delay_isr00 (0)
+    _I2C_HT24LC64_write
+        _I2C_start_bit (0)
+            __DELAYX (1)
+        _sendbyte (0)
+            __DELAY (1)
+        _sendword (0)
+            __DELAY (1)
+        _I2C_stop_bit (0)
+            __DELAYX (1)
+    _I2C_HT24LC64_read
+        _I2C_start_bit (0)
+            __DELAYX (1)
+        _sendbyte (0)
+            __DELAY (1)
+        _sendword (0)
+            __DELAY (1)
+        _I2C_read_Data (0)
+            __DELAYX (1)
+        _I2C_stop_bit (0)
+            __DELAYX (1)
+    _I2C_Ack
+        __DELAY (0)
+    _I2C_Nack
+        __DELAY (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'c:\users\朝璣花\desktop\mike\holtek_c\project\20230206\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

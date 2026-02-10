@@ -1,0 +1,207 @@
+
+Linker Version 8.7.7.220718
+Input Object File: d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\STARTUP1_L.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ
+Input Object File: d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\HAL_CLOCK.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ)
+     00h     0002h     0004h    0003h      CODE               @start (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ)
+     00h     0005h     000eh    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     000fh     0023h    0015h      CODE               _I2C_stop_bit (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0024h     0073h    0050h      CODE               _I2C_read_Data (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0074h     0077h    0004h      CODE               __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0078h     0122h    00abh      CODE               _sendword (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0123h     017ah    0058h      CODE               _sendbyte (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     017bh     01a1h    0027h      CODE               _I2C_start_bit (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     01a2h     01bbh    001ah      CODE               _I2C_HT24LC64_read (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     01bch     01c0h    0005h      CODE               _I2C_init (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     01c1h     01ceh    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     01cfh     0206h    0038h      CODE               _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\HAL_CLOCK.OBJ)
+     00h     0207h     022bh    0025h      CODE               _main (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ)
+     00h     0080h     0080h    0001h      DATA     21        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     28        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     24        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     9         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     6         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ch     008ch    0000h      LOCAL    0         @dummy (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _main (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ)
+     00h     0085h     0087h    0003h      LOCAL    2.3333    _clockSetSystemSrc (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\HAL_CLOCK.OBJ)
+     00h     0085h     0085h    0001h      LOCAL    3         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0000h      LOCAL    0         _I2C_init (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0087h     008bh    0005h      LOCAL    2.2       _I2C_HT24LC64_read (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _I2C_start_bit (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      LOCAL    2         _sendbyte (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0086h    0002h      LOCAL    2.5       _sendword (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _I2C_read_Data (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _I2C_stop_bit (d:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\I2C.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     01a2h              _I2C_HT24LC64_read
+     0087h              _I2C_HT24LC64_read_2
+     01bch              _I2C_init
+     0024h              _I2C_read_Data
+     017bh              _I2C_start_bit
+     000fh              _I2C_stop_bit
+     0077h              __DELAY0
+     0076h              __DELAY1
+     0075h              __DELAY2
+     0074h              __DELAY3
+     000bh              __DELAYX0
+     000ah              __DELAYX1
+     0009h              __DELAYX2
+     0008h              __DELAYX3
+     0007h              __DELAYX4
+     0006h              __DELAYX5
+     0005h              __DELAYX6
+     01c6h              __DELAYY0_isr00
+     01c5h              __DELAYY1_isr00
+     01c4h              __DELAYY2_isr00
+     01c3h              __DELAYY3_isr00
+     01c2h              __DELAYY4_isr00
+     01c1h              __DELAYY5_isr00
+     01cfh              _clockSetSystemSrc
+     0207h              _main
+     0078h              _sendword
+     0086h              _sendword_2
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+
+     Address            Public by Value
+     0005h              __DELAYX6
+     0006h              __DELAYX5
+     0007h              __DELAYX4
+     0008h              __DELAYX3
+     0009h              __DELAYX2
+     000ah              __DELAYX1
+     000bh              __DELAYX0
+     000fh              _I2C_stop_bit
+     0024h              _I2C_read_Data
+     0074h              __DELAY3
+     0075h              __DELAY2
+     0076h              __DELAY1
+     0077h              __DELAY0
+     0078h              _sendword
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0086h              _sendword_2
+     0087h              _I2C_HT24LC64_read_2
+     017bh              _I2C_start_bit
+     01a2h              _I2C_HT24LC64_read
+     01bch              _I2C_init
+     01c1h              __DELAYY5_isr00
+     01c2h              __DELAYY4_isr00
+     01c3h              __DELAYY3_isr00
+     01c4h              __DELAYY2_isr00
+     01c5h              __DELAYY1_isr00
+     01c6h              __DELAYY0_isr00
+     01cfh              _clockSetSystemSrc
+     0207h              _main
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     022ch    6%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     022ch    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     000ch    9%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     000ch    0%
+
+Use Stack Count
+_main: 3
+_I2C_HT24LC64_write: 2
+_I2C_Ack: 1
+_I2C_Nack: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _clockSetSystemSrc (1)
+            _builtin_holtek_delay_isr00 (1)
+            _I2C_init (1)
+            _I2C_HT24LC64_read (1)
+                _I2C_start_bit (2)
+                    __DELAYX (3)
+                _sendbyte (2)
+                    __DELAY (3)
+                _sendword (2)
+                    __DELAY (3)
+                _I2C_read_Data (2)
+                    __DELAYX (3)
+                _I2C_stop_bit (2)
+                    __DELAYX (3)
+    _I2C_HT24LC64_write
+        _I2C_start_bit (0)
+            __DELAYX (1)
+        _sendbyte (0)
+            __DELAY (1)
+        _sendword (0)
+            __DELAY (1)
+        _I2C_stop_bit (0)
+            __DELAYX (1)
+    _I2C_Ack
+        __DELAY (0)
+    _I2C_Nack
+        __DELAY (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'd:\mike\holtek_c\project\ht66f2690_i2c_ht24lc64\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

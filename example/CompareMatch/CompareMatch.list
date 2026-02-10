@@ -1,0 +1,182 @@
+				;file C:\Users\Steven\Desktop\程式\70A\CompareMatch\CompareMatch.c
+				;1	// PROGRAM	: CompareMatch.c						2015.0618
+				;2	// FUNCTION	: STM Compare Match Output Mode Control	By Steven
+				;3	// Note: PxSn, Pin-remapping and Cross-pin Function
+				;4	// Change Line20 & Line21, What happen ? Why.......
+				;5	#include <HT66F70A.h>
+				;6	#include "MyType.h"
+				;7	#define fSYS   8000000								//fSYS=8MHz
+				;8	const u16 Pitch_TAB[] = {			      			//音調常數建表區
+0005	0778	mov     a, FD1L
+0006	06A7	andm    a, PFC
+0007	05ED	orm     a, SIMC1
+0008	0598	orm     a, __pac[5]
+0009	04F9	xorm    a, FD1H
+000A	0470	xor     a, I2CTOC
+000B	03EA	addm    a, ADRL
+000C	03BC	addm    a, LVRC
+000D	0000	nop
+000E	0000	nop
+000F	0000	nop
+0010	0000	nop
+				L0011:
+0011	0000	nop
+				L0012:
+0012	0000	nop
+0013	1785	sdz     ACC
+0014	2812	jmp     L0012
+				L0015:
+0015	0000	nop
+0016	1785	sdz     ACC
+0017	2815	jmp     L0015
+0018	5783	sdz     rc[1]
+0019	2815	jmp     L0015
+001A	0003	ret
+				;9			fSYS/(523*2*4),fSYS/(587*2*4),fSYS/(659*2*4),
+				;10			fSYS/(698*2*4),fSYS/(785*2*4),fSYS/(880*2*4),
+				;11			fSYS/(998*2*4),fSYS/(523*4*4)};
+				;12	void Delayms(u16);									//函式原型宣告
+				;13	void main()
+				;14	{	u8 i;
+				@code .SECTION 'CODE'
+				include HT66F70A.inc
+0000	1F0B	clr     BP
+0001	2802	jmp     _main_startup1
+				@start .SECTION 'CODE'
+				_main_startup1:
+				@start .SECTION 'CODE'
+0002	0F00	mov     a, 0H
+0003	008B	mov     BP, a
+0004	283E	jmp     _main
+				;15		_wdtc=0b10101111;								//關閉看們狗計時器
+				_main:
+				_main:
+003E	0FAF	mov     a, AFH
+003F	00BE	mov     WDTC, a
+				;16		_pcs1=0x10;										//設定PC3為TP2功能
+0040	0F10	mov     a, 10H
+0041	80E9	lmov    PCS1, a
+				;17		_pcs2=0x01;										//設定PC4為TP2功能
+0043	0F01	mov     a, 1H
+0044	80EA	lmov    PCS2, a
+				;18		_tm2c0=0; _tm2c1=0b00110001;					//STM:比對吻合輸出模式,CCRA吻合清除
+0046	1F51	clr     TM2C0
+0047	0F31	mov     a, 31H
+0048	00D2	mov     TM2C1, a
+				;19		_pac0=0;										//設定PA0為輸出
+0049	3413	clr     PAC0
+				;20		while(1)
+				;21		{	for(i=0;i<8;i++)
+				_L8:
+004A	5F06	clr     i[0]
+006D	5486	inc     i[0]
+006E	0F07	mov     a, 7H
+006F	4206	sub     a, i[0]
+0070	3C0A	sz      C
+0071	284B	jmp     _L6
+0072	284A	jmp     _L8
+0073	2873	jmp     $
+				;22			{	_tm2al=(u8)Pitch_TAB[i];				//置入對應之音調常數	
+				_L6:
+004B	4706	mov     a, i[0]
+004C	4081	mov     rb, a
+004D	5F02	clr     rc
+004E	340A	clr     C
+004F	5A81	rlc     rb
+0050	5A82	rlc     rc
+0051	0F0A	mov     a, AH
+0052	4301	add     a, rb
+0053	0083	mov     MP1L, a
+0054	0F80	mov     a, 80H
+0055	5302	adc     a, rc
+0056	0084	mov     MP1H, a
+0057	2031	call    L0031
+0058	4081	mov     rb, a
+0059	2030	call    L0030
+005A	4082	mov     rc, a
+005B	4701	mov     a, rb
+005C	00D5	mov     TM2AL, a
+				;23				_tm2ah=Pitch_TAB[i]>>8;					//注意：Low Byte先寫
+005D	4702	mov     a, rc
+005E	00D6	mov     TM2AH, a
+				;24				_t2on=1;								//啟動TM2計數
+005F	31D1	set     T2ON
+				;25				Delayms(250); _t2on=0; 					//延遲250mS,停止計數
+0060	0FFA	mov     a, FAH
+0061	4084	mov     del, a
+0062	5F05	clr     del[1]
+0063	201B	call    _Delayms
+0064	35D1	clr     T2ON
+				;26				_pa0=!_pa0;								//F70A燒錄後PA0/PA2可恢復IO功能
+0065	0712	mov     a, PA
+0066	0E01	and     a, 1H
+0067	4080	mov     ra, a
+0068	0F01	mov     a, 1H
+0069	4480	xorm    a, ra
+006A	3412	clr     PA0
+006B	4700	mov     a, ra
+006C	0592	orm     a, PA
+				;27			}
+				;28		}
+				;29	}
+				;30	void Delayms(u16 del)						
+				;31	{	u16 i;											//@fSYS=8MH,延遲del*1ms
+				;32		for(i=0;i<del;i++) GCC_DELAY(2000);
+				_Delayms:
+				_Delayms:
+001B	5F01	clr     rb
+001C	5F02	clr     rc
+001D	2829	jmp     _L2
+				_L3:
+001E	0F01	mov     a, 1H
+001F	4083	mov     rc[1], a
+0020	0FF1	mov     a, F1H
+0021	340B	clr     BP0
+0022	348B	clr     BP1
+0023	2011	call    L0011
+0024	348B	clr     BP1
+0025	340B	clr     BP0
+0026	5481	inc     rb
+0027	3D0A	sz      Z
+0028	5482	inc     rc
+				_L2:
+0029	4701	mov     a, rb
+002A	4204	sub     a, del[0]
+002B	4702	mov     a, rc
+002C	5205	sbc     a, del[1]
+002D	3B0A	snz     CZ
+002E	281E	jmp     _L3
+002F	0003	ret
+				L0030:
+0030	1483	inc     MP1L
+				L0031:
+0031	3F84	sz      MP1H.7
+0032	2835	jmp     L0035
+0033	0702	mov     a, [02H]
+0034	0003	ret
+				L0035:
+0035	1B04	rrca    MP1H
+0036	0E3F	and     a, 3FH
+0037	0089	mov     TBHP, a
+0038	1B03	rrca    MP1L
+0039	0087	mov     TBLP, a
+003A	1D05	tabrd   ACC
+003B	3C0A	sz      C
+003C	0708	mov     a, TBLH
+003D	0003	ret
+				;33	}	
+				data .SECTION 'DATA'
+				__pa DB DUP (?) ; __pa
+				__pac DB DUP (?) ; __pac
+				__wdtc DB DUP (?) ; __wdtc
+				__tm2c0 DB DUP (?) ; __tm2c0
+				__tm2c1 DB DUP (?) ; __tm2c1
+				__tm2al DB DUP (?) ; __tm2al
+				__tm2ah DB DUP (?) ; __tm2ah
+				ra DB DUP (?)
+				rb DB DUP (?)
+				rc DB DUP (?)
+				del DB 2 DUP (?) ; del
+				i DB DUP (?) ; i
+				__pcs1 DB DUP (?) ; __pcs1
+				__pcs2 DB DUP (?) ; __pcs2
