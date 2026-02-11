@@ -1,2 +1,3 @@
-本專案為使用Holtek HT66F2390 MCU之韌體實作練習
+#本專案為使用Holtek HT66F2390 MCU之韌體實作練習
+
 ![HT66 MCU](images/image.png)
