@@ -1,3 +1,3 @@
 本專案為使用Holtek HT66F2390 MCU之韌體實作練習
 
-![image]![alt text](image.png)
+![image](image.png)
